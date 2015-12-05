@@ -6,5 +6,4 @@ Write permite escribir en un archivo existente (al final del mismo) o crear un a
 
 Todo ello desde una clase principal menú.
 
-
-PD: Provienen de un proyecto en Eclipse
+El .zip presente en el repositorio es el proyecto en Eclipse, para que sea más facil importalo.
