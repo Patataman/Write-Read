@@ -9,7 +9,7 @@ import java.nio.file.Paths;
 public class Read {
 	
 	/**
-	 * Método que lee un archivo.
+	 * Mï¿½todo que lee un archivo.
 	 * @param path: String de la ruta del archivo.
 	 * 				La ruta tiene como origen la carpeta Ficheros.
 	 * @return BufferedReader del archivo que se quiere leer.
