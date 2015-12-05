@@ -140,8 +140,8 @@ public class Menu {
 				
 				//////////////////////////////////////////////////////
 				//   Conocer directorio actual                      //
-				final String dir = System.getProperty("user.dir");//
-		        System.out.println("current dir = " + dir);       //
+				//final String dir = System.getProperty("user.dir");//
+		        //System.out.println("current dir = " + dir);       //
 		        //////////////////////////////////////////////////////
 		        
 				pathRead4 = sc.next();
