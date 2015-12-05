@@ -8,22 +8,43 @@ import java.nio.file.Paths;
 
 public class Read {
 	
-	/**
-	 * M�todo que lee un archivo.
-	 * @param path: String de la ruta del archivo.
-	 * 				La ruta tiene como origen la carpeta Ficheros.
-	 * @return BufferedReader del archivo que se quiere leer.
-	 * @throws IOException
-	 */
-	public static BufferedReader lectura(String path) {	
+
+	public static int lecturaLn(String path, int lineas) {	
 		try {
 			Charset charset = Charset.forName("UTF-8");
 			Path p = Paths.get(path);
 			BufferedReader read = Files.newBufferedReader(p, charset);
-			return read;
+			String line = "";
+			while ((line = read.readLine()) != null && lineas != 0) {
+				System.out.println(line);
+				lineas--;
+			}
+			read.close();
+			return 0;
 		} catch (IOException e) {
 			System.out.println(e);
-			return null;
+			return -1;
+		}
+	}
+	
+
+	public static int lecturaByte(String path, int letras) {	
+		try {
+			Charset charset = Charset.forName("UTF-8");
+			Path p = Paths.get(path);
+			BufferedReader read = Files.newBufferedReader(p, charset);
+			int letra;
+			while ((letra = read.read()) != -1 && letras != 0) {
+				char c = (char) letra;
+				System.out.print(c+", ");
+				letras--;
+			}
+			System.out.println();
+			read.close();
+			return 0;
+		} catch (IOException e) {
+			System.out.println(e);
+			return -1;
 		}
 	}
 }
